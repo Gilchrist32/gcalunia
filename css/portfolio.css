@@ -280,14 +280,14 @@
   /*==================== BUTTONS ====================*/
   .button{
     display:inline-block;
-    background-color: var(--first-color);
+    background-color: var(--first-color-alt);
     color: #fff;
     border-radius: .5rem;
     font-weight: var(--font-medium);
 }
 
 .button:hover{
-    background-color: var(--first-color-alt);
+    background-color: var(--first-color-second);
 }
 
 .button__icon{
@@ -355,13 +355,17 @@
  /*==================== WEB PAGE ====================*/
 
 .output__content{
-    background-color: var(--first-color-lighter);
+    background-color: rgb(46, 144, 236);
     box-shadow: 0 2px 4px rgb(126, 125, 125);
     border-radius: .5rem;
     margin-bottom: var(--mb-0-5);
 }
 .output__content:hover{
     box-shadow: 0 4px 8px rgba(0,0,0.15);
+}
+
+.output__subtitle{
+    color: #000;
 }
 
 img{
