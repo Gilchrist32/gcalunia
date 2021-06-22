@@ -189,6 +189,10 @@
     align-items: center;
 }
 
+.logo__img{
+    height: 50px;
+}
+
 .nav__logo,
 .nav__toggle{
     color: var(--title-color);
