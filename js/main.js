@@ -195,3 +195,54 @@ themeButton.addEventListener('click', () =>{
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+/*==================== DESIGN ====================*/
+const filterItem = document.querySelector(".items");
+const filterImg = document.querySelectorAll(".image");
+
+window.onload = () => {
+    filterItem.onclick = (selectedItem) => {
+        if(selectedItem.target.classList.contains("item")){
+            filterItem.querySelector(".active").classList.remove("active");
+            selectedItem.target.classList.add("active");
+            let filterName = selectedItem.target.getAttribute("data-name");
+            filterImg.forEach((image) =>{
+                let filterImages = image.getAttribute("data-name");
+
+                if((filterImages == filterName) || filterName == "all"){
+                    image.classList.remove("hide");
+                    image.classList.add("show");
+                }else{
+                    image.classList.add("hide");
+                    image.classList.remove("show");
+                }
+            })
+        }
+    }
+    for (let index = 0; index < filterImg.length; index++) {
+        filterImg[index].setAttribute("onclick", "preview(this)"); //adding onclick attribute in all available images
+    }
+}
+
+//SELECTING ALL REQUIRED ELEMENT // 
+const previewBox = document.querySelector(".preview-box"),
+previewImg = previewBox.querySelector("img"),
+//categoryName = previewBox.querySelector(".title p").
+closeIcon = previewBox.querySelector(".icon");
+shadow = document.querySelector(".shadow");
+
+//FULLSCREEN PREVIEW IMAGE FUNCTION //
+function preview(element){
+    document.querySelector("body").style.overflow = "auto"; //show the scroll bar on body
+    let selectedPrevImg = element.querySelector("img").src; //getting user clicked image source link and store in a variable
+    //let selectedImgCategory = element.getAttribute("data-name"); // getting user clicked data-name value
+    //categoryName.textContent = selectedImgCategory; // passing the data-name value to category name variable
+    previewImg.src = selectedPrevImg;
+    shadow.classList.add("show"); //show the light grey background
+    previewBox.classList.add("show"); //show the preview boc//
+    closeIcon.onclick = () =>{ //if user click on the close icon of the preview box  //
+        previewBox.classList.remove("show"); // hide the preview box //
+        shadow.classList.remove("show"); //shide the light grey background
+        document.querySelector("body").style.overflow = "auto"; //show the scroll bar on body
+      }
+} 
