@@ -437,6 +437,7 @@ input{
      justify-content: center;
  }
 
+
  .pic{
      position: relative;
      border-radius: 10px;
@@ -506,7 +507,7 @@ input{
  #check2:checked ~ .design__container .design__gallery .awareness{
      opacity: 0;
      transform: 0;
-     position: absolute;
+     position: fixed;
      transition: .5s;
  }
 
@@ -521,7 +522,7 @@ input{
  #check3:checked ~ .design__container .design__gallery .consideration{
      opacity: 0;
      transform: 0;
-     position: absolute;
+     position: fixed;
      transition: .5s;
  }
 
@@ -536,7 +537,7 @@ input{
  #check4:checked ~ .design__container .design__gallery .decision{
      opacity: 0;
      transform: 0;
-     position: absolute;
+     position: fixed;
      transition: .5s;
  }
 
