@@ -12,6 +12,7 @@
 
         <!--------------------CSS-------------------->
         <link rel="stylesheet" href="css/portfolio.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
 
         <title>Gilchrist Calunia Portfolio</title>
     </head>
@@ -76,7 +77,7 @@
        <section class="website section">
         <!------------------- PROJECT BAR --------------------->
             <div class="website__container container grid">
-                <h3 class="project__title">Project Website</h3>
+                <h3 class="project__title">Video Project</h3>
 
                 <aside class="button aside__button">
                 <a href="website.html" class="button button--flex button--small">
@@ -86,6 +87,24 @@
                     <i class="uil uil-brush-alt portfolio__icon"></i>
                     Design</a>
                 </aside>
+            </div>
+
+            <div class="video__container container grid">
+                <div class="video__list">
+                    <div class="videos__data">
+                        <h3 class="video__title">Luxury Lifestyle</h3>
+                        <div class="video__btn">
+                            <iframe class="popup" 
+                                    src="https://drive.google.com/file/d/1zo_ouGNmRw_ZMVXK1rfUyHJKomOOOINs/preview" 
+                                    allow="autoplay">
+                            </iframe>
+                            <iframe class="popup"
+                                    src="https://drive.google.com/file/d/1uifQJ3hWWHMRtCH141bF5wVymdHPcg0V/preview" 
+                                    allow="autoplay">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -149,5 +168,20 @@
 
         <!------------------- MAIN JS --------------------->
         <script src="js/main.js"></script>
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.js"
+             integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous">
+        </script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $(".popup").magnificPopup({
+                    type: "iframe"
+    })
+})
+        </script>
     </body>
 </html>

@@ -246,3 +246,10 @@ function preview(element){
         document.querySelector("body").style.overflow = "auto"; //show the scroll bar on body
       }
 } 
+
+// MAGNETIC POP-UP //
+$(document).ready(function(){
+    $(".popup").magnificPopup({
+        type: "iframe"
+    })
+})

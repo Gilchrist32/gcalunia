@@ -396,6 +396,12 @@ p{
 }
 
  /*==================== VIDEOS ====================*/
+ .video__btn{
+     width: 100%;
+     height: 100%;
+     z-index: 99999;
+     transition: all .3s;
+ }
 
   /*==================== DESIGN ==================*/
 .wrapper nav{
