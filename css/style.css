@@ -829,7 +829,8 @@
  }
 
  .project__img{
-     width: 350px;
+     margin-left: 40px;
+     width: 500px;
      justify-self: center;
  }
  
@@ -1212,6 +1213,10 @@
         align-items: center;
         margin-bottom: 50px;
     }
+    .project__img{
+        width: 300px;
+    }
+
     .project{
         text-align: initial;
     }
@@ -1279,6 +1284,11 @@
     }
     .swiper-container-horizontal > .swiper-pagination-bullets{
         bottom: -4.5rem;
+    }
+    .project__img{
+        width: 300px;
+        height: 300px;
+        margin-right: 2\10px;
     }
     .contact__container{
         margin-top: -30px;
